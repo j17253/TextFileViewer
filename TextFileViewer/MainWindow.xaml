@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TextFileViewer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <local:TextViewer Text="aaa bbb ccc qwerty asdf"></local:TextViewer>
+    </DockPanel>
 </Window>
