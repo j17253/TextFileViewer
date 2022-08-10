@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:TextFileViewer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    
     <DockPanel>
-        <local:TextViewer Text="aaa bbb ccc qwerty asdf"></local:TextViewer>
+        <local:TextViewer Text="{Binding Text}"></local:TextViewer>
     </DockPanel>
 </Window>
