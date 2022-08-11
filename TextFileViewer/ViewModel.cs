@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using System.Windows;
 
 namespace TextFileViewer
@@ -21,14 +22,14 @@ namespace TextFileViewer
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        private string GetText()
+        private static string GetText()
         {
             try
             {
                 var args = Environment.GetCommandLineArgs();
                 if (args != null && args.Length > 1)
                 {
-                    return args[1];
+                    return ReadFile(args[1]);
                 }
             }
             catch (Exception e)
@@ -37,6 +38,11 @@ namespace TextFileViewer
             }
 
             return string.Empty;
+        }
+
+        private static string ReadFile(string fileName)
+        {
+            return File.ReadAllText(fileName);
         }
     }
 }
