@@ -1,0 +1,8 @@
+﻿How to add Windows File Explorer context menu.
+
+HKEY_CURRENT_USER\Software\Classes\*\shell
+
+Add key "TextFileViewer" (default) -> "Open with Text File Viewer"
+                       Icon -> file with path for icon  (optional)
+
+Add key "command" (default) -> "[exe file of the app]" "%1"
